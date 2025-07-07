@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="light-mode" lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -8,94 +9,76 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body class="flex flex--col">
+<body class="flex flex--col">
     <header class="header">
-      <div class="logo">
-        <svg class="svg--big">
-          <use href="images/logo.svg#logo"></use>
-        </svg>
-      </div>
-      <div class="desktop-sidebar font-size-015">
-        <nav class="desktop-nav padding-top-2 padding-bottom-05 border-bottom">
-          <ul>
-            <li class="padding-block-1 padding-inline-1">
-              <a href="#" class="link flex desktop-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-home.svg#home"></use>
-                </svg>
-                <span class="block">All Notes</span>
-              </a>
-            </li>
-            <li class="padding-block-1 padding-inline-1">
-              <a href="#" class="link flex desktop-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-archive.svg#archive"></use>
-                </svg>
-                <span class="block">Archived Notes</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="desktop-tags padding-block-1"><span class="margin-left-1">Tags</span></div>
-      </div>
-      <div class="mobile-nav padding-block-1 border-top font-size-012">
-        <nav class="container">
-          <ul class="flex mobile-nav__items">
-            <li class="mobile-nav__item">
-              <a href="#" class="flex flex--col link mobile-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-home.svg#home"></use>
-                </svg>
-                <span class="hidden">Home</span>
-              </a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="flex flex--col link mobile-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-search.svg#search"></use>
-                </svg>
-                <span class="hidden">Search</span>
-              </a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="flex flex--col link mobile-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-archive.svg#archive"></use>
-                </svg>
-                <span class="hidden">Archived</span>
-              </a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="flex flex--col link mobile-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-tag.svg#tag"></use>
-                </svg>
-                <span class="hidden">Tags</span>
-              </a>
-            </li>
-            <li class="mobile-nav__item">
-              <a href="#" class="flex flex--col link mobile-nav__link">
-                <svg class="svg--small">
-                  <use href="images/icon-settings.svg#settings"></use>
-                </svg>
-                <span class="hidden">Settings</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+        <div class="logo">
+            <svg class="svg--big">
+                <use href="images/logo.svg#logo"></use>
+            </svg>
+        </div>
+        <div class="menu font-size-015">
+            <nav class="nav">
+                <ul class="flex nav__items">
+                    <li class="nav__item">
+                        <a href="#" class="link flex nav__link">
+                            <svg class="svg--small">
+                                <use href="images/icon-home.svg#home"></use>
+                            </svg>
+                            <span class="hidden nav__item--dk">All Notes</span>
+                            <span class="hidden nav__item--tab">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item--mobile nav__item">
+                        <a href="#" class="flex link nav__link">
+                            <svg class="svg--small">
+                                <use href="images/icon-search.svg#search"></use>
+                            </svg>
+                            <span class="hidden nav__item--tab">Search</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="link flex nav__link">
+                            <svg class="svg--small">
+                                <use href="images/icon-archive.svg#archive"></use>
+                            </svg>
+                            <span class="hidden nav__item--dk">Archived Notes</span>
+                            <span class="hidden nav__item--tab">Archived</span>
+                        </a>
+                    </li>
+                    <li class="nav__item--mobile nav__item">
+                        <a href="#" class="flex link nav__link">
+                            <svg class="svg--small">
+                                <use href="images/icon-tag.svg#tag"></use>
+                            </svg>
+                            <span class="hidden nav__item--tab">Tags</span>
+                        </a>
+                    </li>
+                    <li class="nav__item--mobile nav__item">
+                        <a href="#" class="flex link nav__link">
+                            <svg class="svg--small">
+                                <use href="images/icon-settings.svg#settings"></use>
+                            </svg>
+                            <span class="hidden nav__item--tab">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="desktop-tags padding-block-05 hidden">
+                <span class="margin-left-1">Tags</span>
+            </div>
+        </div>
+          </header>
     <main>
-      <section class="container">
-        <p>My name is toyeeb</p>
-      </section>
+        <section class="container">
+            <p>My name is toyeeb</p>
+        </section>
     </main>
-  </body>
+</body>
+
 </html>

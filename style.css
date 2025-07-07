@@ -66,17 +66,13 @@
   display: flex;
 }
 
-.block {
-  display: block;
-}
-
 .link {
   text-decoration: none;
 }
 
 /*padding*/
-.padding-block-1 {
-  padding-block: var(--spacing-1);
+.padding-block-05 {
+  padding-block: var(--spacing-05);
 }
 
 .padding-top-2 {
@@ -117,10 +113,11 @@
   font-size: var(--spacing-012);
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 700px) {
-  .hidden {
-    display: none;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -129,45 +126,44 @@
     flex-direction: column;
   }
 
-  .container {
-    width: 90%;
-    margin-inline: auto;
-  }
-
   /* Header Section*/
-  .desktop-sidebar {
-    display: none;
-  }
-
   .logo {
     padding-inline: 5%;
     background-color: var(--neutral-100);
     padding-block: var(--spacing-015);
   }
 
-  .mobile-nav {
+  .menu {
     width: 100vw;
     position: fixed;
     bottom: 0;
     border-top: var(--border-1);
+    padding-block: var(--spacing-1);
   }
 
-  .mobile-nav__items {
+  .nav__items {
+    width: 90%;
+    margin-inline: auto;
     justify-content: space-between;
   }
 }
 
 @media (min-width: 700px) and (max-width: 1024px) {
   /* Header section */
-  .mobile-nav__items .mobile-nav__item:not(:last-child) {
+
+  .nav__item--tab {
+    display: block;
+  }
+  .nav__items .nav__item:not(:last-child) {
     border-right: var(--border-1);
   }
 
-  .mobile-nav__item {
+  .nav__item {
     flex: 1;
   }
 
-  .mobile-nav__link {
+  .nav__link {
+    flex-direction: column;
     align-items: center;
     gap: var(--spacing-05);
   }
@@ -176,17 +172,39 @@
 @media (min-width: 1024px) {
   /*Header Section*/
   .header {
-    width: 15%;
+    width: 20%;
     padding: var(--spacing-2);
     border-right: var(--border-1);
     height: 100vh;
   }
 
-  .mobile-nav {
-    display: none;
+  .logo {
+    padding-bottom: var(--spacing-025);
   }
 
-  .desktop-nav__link {
+  .nav {
+    padding-bottom: var(--spacing-1);
+    border-bottom: var(--border-1);
+  }
+
+  .nav__items {
+    flex-direction: column;
+  }
+
+  .nav__item {
+    padding: var(--spacing-1);
+  }
+
+  .nav__item--dk,
+  .desktop-tags {
+    display: block;
+  }
+
+  .nav__link {
     gap: var(--spacing-1);
+  }
+
+  .nav__item--mobile {
+    display: none;
   }
 }
